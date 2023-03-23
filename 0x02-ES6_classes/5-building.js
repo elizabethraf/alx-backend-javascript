@@ -1,16 +1,14 @@
 export default class Building {
   constructor(sqft) {
-    // Store attributes in underscore version
+    // Abstract method that must be implemented by any subclass
+    if (this.constructor !== Building && !this.evacuationWarningMessage) throw Error('Class extending Building must override evacuationWarningMessage');
+
+    // Create objects
     this._sqft = sqft;
   }
 
-  // Getter for sqft attribute
+  // Getters
   get sqft() {
     return this._sqft;
-  }
-
-  // Abstract method that must be implemented by any subclass
-  evacuationWarningMessage() {
-    throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 }
