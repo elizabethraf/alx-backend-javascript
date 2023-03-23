@@ -1,8 +1,11 @@
-export default class Car
-    def __init__(self, brand, motor, color):
-        self._brand = brand
-        self._motor = motor
-        self._color = color
+export default class Car {
+  constructor(brand = undefined, motor = undefined, color = undefined) {
+    this._brand = brand;
+    this._motor = motor;
+    this._color = color;
+  }
 
-    def cloneCar(self):
-        return Car(self._brand, self._motor, self._color)
+  cloneCar() {
+    return new this.constructor();
+  }
+}
