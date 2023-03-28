@@ -4,9 +4,9 @@ export default function getListStudentIds(studentArray) {
   if (!Array.isArray(studentArray)) {
     return [];
   }
-  
+
   // Use map to extract the IDs object in the array
-  const idArray = studentArray.map(student => student.id);
-  
+  const idArray = studentArray.map((student) => student.id);
+
   return idArray;
 }
