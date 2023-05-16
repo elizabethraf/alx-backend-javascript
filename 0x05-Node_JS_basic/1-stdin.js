@@ -10,7 +10,6 @@ console.log('Welcome to Holberton School, what is your name?');
 rl.on('line', (input) => {
   console.log(`Your name is: ${input}`);
 
-  // End the program when the user enters a line
   rl.close();
 });
 
